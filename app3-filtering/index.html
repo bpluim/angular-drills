@@ -1,9 +1,25 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<html ng-app="thirdApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Third App</title>
+	</head>
+	<body ng-controller="mainController">
+
+		<input ng-model='search.name' placeholder="Search Name"></input>
+		<input ng-model='search.email' placeholder="Search Email"></input>
+		<input ng-model='search.phone' placeholder="Search Phone"></input>
+		<ul ng-repeat='user in users | filter: search'>
+			<li>{{user.name}}</li>
+			<li>{{user.email}}</li>
+			<li>{{user.phone}}</li>
+		</ul>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
 	</body>
 </html>
+

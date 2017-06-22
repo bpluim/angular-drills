@@ -1,7 +1,28 @@
 <html ng-app="apiApp">
-	<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>API App</title>
+	</head>
+	<body ng-controller="mainController">
 		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<input type='text' ng-model='num' placeholder='Search Name'></input>
+		<button ng-click='getCharacter(num)'>Click Here</button>
+		
+		<ul>
+			<li>{{character.name}}</li>
+			<ul>
+				<li>Gender: {{character.gender}}</li>
+				<li>Eye Color: {{character.eye_color}}</li>
+				<li>Hair Color: {{character.hair_color}}</li>
+				<li>Skin Color: {{character.skin_color}}</li>
+			</ul>
+		</ul>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
